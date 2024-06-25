@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "cstdint": "c",
+        "locale": "c",
+        "string": "c",
+        "random": "c",
+        "algorithm": "c",
+        "queue": "c",
+        "stack": "c"
+    }
+}

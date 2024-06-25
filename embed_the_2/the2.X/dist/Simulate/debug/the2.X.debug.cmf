@@ -1,0 +1,1148 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/Simulate/debug/the2.X.debug.o
+cinit CODE 0 24AC 24AC 4A 1
+intcode_body CODE 0 1324 1324 1AC 1
+text0 CODE 0 25F0 25F0 30 1
+text1 CODE 0 229C 229C A2 1
+text2 CODE 0 14D0 14D0 192 1
+text3 CODE 0 244A 244A 62 1
+text4 CODE 0 24F6 24F6 4A 1
+text5 CODE 0 213A 213A B2 1
+text6 CODE 0 2074 2074 C6 1
+text7 CODE 0 17F0 17F0 164 1
+text8 CODE 0 1954 1954 13E 1
+text9 CODE 0 1E44 1E44 11A 1
+nvCOMRAM COMRAM 1 56 56 1 1
+text10 CODE 0 1F5E 1F5E 116 1
+text11 CODE 0 1A92 1A92 13E 1
+text12 CODE 0 2540 2540 40 1
+text13 CODE 0 25BE 25BE 32 1
+text14 CODE 0 23E0 23E0 6A 1
+text16 CODE 0 1662 1662 18E 1
+text17 CODE 0 1D0C 1D0C 138 1
+text18 CODE 0 1BD0 1BD0 13C 1
+text19 CODE 0 233E 233E A2 1
+text20 CODE 0 21EC 21EC B0 1
+text21 CODE 0 100C 100C 318 1
+text22 CODE 0 2580 2580 3E 1
+idataCOMRAM CODE 0 2620 2620 4 1
+cstackCOMRAM COMRAM 1 1 1 2C 1
+cstackBANK0 BANK0 1 60 60 22 1
+temp COMRAM 1 57 57 1 1
+bssBANK0 BANK0 1 82 82 A 1
+intcode CODE 0 8 8 6 1
+smallconst SMALLCONST 0 1000 1000 C 1
+dataCOMRAM COMRAM 1 52 52 4 1
+bssCOMRAM COMRAM 1 2D 2D 25 1
+config CONFIG 4 300000 300000 8 1
+$/tmp/xcXgNbaAh.o
+init CODE 0 E E 4 1
+reset_vec CODE 0 0 0 4 1
+config CONFIG 4 300000 300000 8 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 8C-EF3 1
+RAM F00-F5F 1
+SFR F60-F9B 1
+SFR F9D-FD3 1
+SFR FD5-FDA 1
+SFR FE0-FE2 1
+SFR FE8-FEA 1
+SFR FF0-FFC 1
+BANK0 8C-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 4-7 1
+CONST 12-FFF 1
+CONST 2624-1FD2F 1
+IDLOC 200000-200007 1
+STACK 8C-EF3 1
+SMALLCONST 2624-1FD2F 1
+CODE 4-7 1
+CODE 12-FFF 1
+CODE 2624-1FD2F 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EF3 1
+BANK15 F00-F5F 1
+BIGRAM 58-5F 1
+BIGRAM 8C-EF3 1
+BIGRAM F00-F5F 1
+COMRAM 58-5F 1
+CONFIG 300008-30000D 1
+EEDATA F00000-F003FF 1
+MEDIUMCONST 2624-FFFF 1
+MEDIUMCONST 11000-1FD2F 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/Simulate/debug/the2.X.debug.o
+8 intcode CODE >4494:/tmp/xcXaJCIDl.s
+8 intcode CODE >223:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2580 text22 CODE >666:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2580 text22 CODE >668:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+258C text22 CODE >669:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+259C text22 CODE >670:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25AC text22 CODE >671:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25BC text22 CODE >672:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+100C text21 CODE >319:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+100C text21 CODE >322:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1022 text21 CODE >324:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+103E text21 CODE >325:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1042 text21 CODE >328:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+105E text21 CODE >331:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+107C text21 CODE >333:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+108C text21 CODE >335:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1092 text21 CODE >336:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1096 text21 CODE >337:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+10A6 text21 CODE >339:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+10AC text21 CODE >340:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+10B0 text21 CODE >341:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+10C0 text21 CODE >343:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+10C6 text21 CODE >344:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+10CA text21 CODE >345:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+10DA text21 CODE >347:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+10E4 text21 CODE >348:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+10E8 text21 CODE >350:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1106 text21 CODE >352:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1116 text21 CODE >354:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+111A text21 CODE >355:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+111E text21 CODE >356:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1122 text21 CODE >357:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1126 text21 CODE >358:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1136 text21 CODE >360:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+113A text21 CODE >361:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+113E text21 CODE >362:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1142 text21 CODE >363:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1146 text21 CODE >364:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1156 text21 CODE >366:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+115A text21 CODE >367:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+115E text21 CODE >368:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1162 text21 CODE >369:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1166 text21 CODE >370:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1176 text21 CODE >372:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+117A text21 CODE >373:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+117E text21 CODE >374:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1186 text21 CODE >377:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+11A6 text21 CODE >379:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+11B6 text21 CODE >381:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+11BC text21 CODE >382:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+11C0 text21 CODE >383:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+11D0 text21 CODE >385:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+11D6 text21 CODE >386:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+11DA text21 CODE >387:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+11EA text21 CODE >389:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+11F0 text21 CODE >390:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+11F4 text21 CODE >391:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1204 text21 CODE >393:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+120E text21 CODE >398:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+121E text21 CODE >400:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1222 text21 CODE >401:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1226 text21 CODE >402:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+122A text21 CODE >403:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+122E text21 CODE >404:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+123E text21 CODE >406:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1242 text21 CODE >407:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1246 text21 CODE >408:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+124A text21 CODE >409:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+124A text21 CODE >410:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+124E text21 CODE >411:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+125E text21 CODE >413:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1262 text21 CODE >414:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1266 text21 CODE >415:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+126A text21 CODE >416:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+126E text21 CODE >417:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+127E text21 CODE >419:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1282 text21 CODE >420:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1286 text21 CODE >421:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+128A text21 CODE >425:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+128E text21 CODE >427:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1312 text21 CODE >428:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1322 text21 CODE >429:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+21EC text20 CODE >7:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+21EC text20 CODE >12:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+21F0 text20 CODE >13:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+21FE text20 CODE >14:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+2206 text20 CODE >15:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+220A text20 CODE >17:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+2218 text20 CODE >18:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+2220 text20 CODE >19:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+2232 text20 CODE >20:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+2236 text20 CODE >21:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+223A text20 CODE >22:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+2240 text20 CODE >23:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+2242 text20 CODE >21:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+2250 text20 CODE >26:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+2266 text20 CODE >27:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+226E text20 CODE >28:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+2274 text20 CODE >29:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+227A text20 CODE >31:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+228A text20 CODE >32:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+2292 text20 CODE >33:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+229A text20 CODE >34:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+233E text19 CODE >674:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+233E text19 CODE >677:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2352 text19 CODE >680:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2362 text19 CODE >681:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2366 text19 CODE >682:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2378 text19 CODE >685:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2388 text19 CODE >686:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+239A text19 CODE >687:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+239E text19 CODE >691:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+23AE text19 CODE >692:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+23AE text19 CODE >693:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+23B6 text19 CODE >694:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+23C6 text19 CODE >695:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+23CE text19 CODE >696:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+23DE text19 CODE >697:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1BD0 text18 CODE >431:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1BD0 text18 CODE >434:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1BE6 text18 CODE >440:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1BFC text18 CODE >442:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1C18 text18 CODE >443:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1C1C text18 CODE >446:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1C38 text18 CODE >449:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1C42 text18 CODE >450:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1C4C text18 CODE >451:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1C56 text18 CODE >452:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1C60 text18 CODE >454:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1C80 text18 CODE >456:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1C88 text18 CODE >459:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1C9A text18 CODE >461:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1C9E text18 CODE >462:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1CA6 text18 CODE >464:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1CB8 text18 CODE >466:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1CBC text18 CODE >467:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1CC4 text18 CODE >469:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1CD6 text18 CODE >471:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1CDA text18 CODE >472:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1CE2 text18 CODE >474:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1CF4 text18 CODE >476:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1CF8 text18 CODE >477:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1D00 text18 CODE >479:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1D06 text18 CODE >480:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1D0A text18 CODE >481:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1D0C text17 CODE >641:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1D0C text17 CODE >644:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1D22 text17 CODE >646:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1D3E text17 CODE >647:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1D42 text17 CODE >650:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1D5E text17 CODE >653:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1D96 text17 CODE >655:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1D9C text17 CODE >656:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1DA2 text17 CODE >657:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1DA8 text17 CODE >658:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1DAE text17 CODE >661:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1E32 text17 CODE >662:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1E42 text17 CODE >664:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1662 text16 CODE >699:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1662 text16 CODE >702:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+167E text16 CODE >704:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1684 text16 CODE >705:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+168A text16 CODE >706:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1690 text16 CODE >707:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1696 text16 CODE >710:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+16BC text16 CODE >712:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+16C4 text16 CODE >713:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+16C8 text16 CODE >714:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+16D0 text16 CODE >715:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+16D8 text16 CODE >716:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+16D8 text16 CODE >718:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+16FE text16 CODE >720:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1706 text16 CODE >721:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+170A text16 CODE >722:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1712 text16 CODE >723:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+171A text16 CODE >724:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+171A text16 CODE >725:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1740 text16 CODE >727:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1748 text16 CODE >728:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+174C text16 CODE >729:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1754 text16 CODE >730:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+175C text16 CODE >731:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+175C text16 CODE >732:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1782 text16 CODE >734:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+178A text16 CODE >735:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+178E text16 CODE >736:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1796 text16 CODE >737:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+179E text16 CODE >738:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+179E text16 CODE >741:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+17E6 text16 CODE >743:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+17EE text16 CODE >745:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1324 intcode_body CODE >223:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+132E intcode_body CODE >226:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+133C intcode_body CODE >230:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+134A intcode_body CODE >232:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+134E intcode_body CODE >236:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1350 intcode_body CODE >239:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+135E intcode_body CODE >242:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+136C intcode_body CODE >244:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1388 intcode_body CODE >246:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+138C intcode_body CODE >247:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1390 intcode_body CODE >248:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1394 intcode_body CODE >250:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1396 intcode_body CODE >251:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1398 intcode_body CODE >254:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+139A intcode_body CODE >257:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+13A8 intcode_body CODE >259:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+13AA intcode_body CODE >260:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+13AA intcode_body CODE >262:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+13B8 intcode_body CODE >265:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+13BC intcode_body CODE >266:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+13BE intcode_body CODE >267:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+13C2 intcode_body CODE >268:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+13C6 intcode_body CODE >269:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+13D8 intcode_body CODE >272:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+13E0 intcode_body CODE >273:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+13F0 intcode_body CODE >274:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1400 intcode_body CODE >275:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1404 intcode_body CODE >279:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+140C intcode_body CODE >280:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+141C intcode_body CODE >281:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+142C intcode_body CODE >284:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1440 intcode_body CODE >287:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1444 intcode_body CODE >289:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+144C intcode_body CODE >291:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+145E intcode_body CODE >293:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1462 intcode_body CODE >294:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+146A intcode_body CODE >296:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+147C intcode_body CODE >298:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1480 intcode_body CODE >299:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1488 intcode_body CODE >301:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+149A intcode_body CODE >303:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+149E intcode_body CODE >304:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+14A6 intcode_body CODE >306:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+14B8 intcode_body CODE >308:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+14BC intcode_body CODE >309:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+14C4 intcode_body CODE >313:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+23E0 text14 CODE >130:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+23E0 text14 CODE >136:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+23E4 text14 CODE >137:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+23E8 text14 CODE >138:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+23EC text14 CODE >141:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+23F0 text14 CODE >142:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+23F4 text14 CODE >143:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+23F8 text14 CODE >148:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+23FC text14 CODE >149:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2400 text14 CODE >150:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2404 text14 CODE >153:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2408 text14 CODE >154:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+240C text14 CODE >155:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2410 text14 CODE >158:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2414 text14 CODE >159:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2418 text14 CODE >160:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+241C text14 CODE >163:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2420 text14 CODE >164:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2424 text14 CODE >165:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2428 text14 CODE >168:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+242C text14 CODE >169:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2430 text14 CODE >170:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2434 text14 CODE >172:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2438 text14 CODE >173:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+243C text14 CODE >175:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2440 text14 CODE >176:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2444 text14 CODE >178:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2448 text14 CODE >179:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25BE text13 CODE >181:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25BE text13 CODE >186:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25C0 text13 CODE >187:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25C2 text13 CODE >188:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25C4 text13 CODE >191:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25C6 text13 CODE >194:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25C8 text13 CODE >195:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25CA text13 CODE >196:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25CC text13 CODE >197:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25CE text13 CODE >198:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25D0 text13 CODE >199:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25D2 text13 CODE >200:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25D4 text13 CODE >201:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25D6 text13 CODE >204:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25D8 text13 CODE >205:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25DA text13 CODE >208:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25DE text13 CODE >209:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25E2 text13 CODE >211:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25E4 text13 CODE >212:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25E6 text13 CODE >213:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25E8 text13 CODE >214:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25EA text13 CODE >215:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25EC text13 CODE >216:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25EE text13 CODE >217:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2540 text12 CODE >666:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2540 text12 CODE >668:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+254C text12 CODE >669:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+255E text12 CODE >670:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+256E text12 CODE >671:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+257E text12 CODE >672:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1A92 text11 CODE >641:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1A92 text11 CODE >644:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1AA8 text11 CODE >646:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1AC6 text11 CODE >647:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1ACA text11 CODE >650:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1AE8 text11 CODE >653:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1B22 text11 CODE >655:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1B28 text11 CODE >656:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1B2E text11 CODE >657:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1B34 text11 CODE >658:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1B3A text11 CODE >661:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1BBE text11 CODE >662:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1BCE text11 CODE >664:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1F5E text10 CODE >586:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1F5E text10 CODE >589:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1F74 text10 CODE >591:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1F92 text10 CODE >592:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1F96 text10 CODE >595:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1FB4 text10 CODE >599:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1FC6 text10 CODE >602:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1FCA text10 CODE >603:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1FCE text10 CODE >606:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1FD2 text10 CODE >607:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1FD6 text10 CODE >608:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1FDA text10 CODE >609:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1FDE text10 CODE >612:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2062 text10 CODE >613:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2072 text10 CODE >615:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1E44 text9 CODE >555:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1E44 text9 CODE >558:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1E5A text9 CODE >560:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1E78 text9 CODE >561:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1E7C text9 CODE >564:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1E9A text9 CODE >568:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1EAC text9 CODE >571:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1EB0 text9 CODE >572:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1EB4 text9 CODE >573:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1EB8 text9 CODE >575:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1EBC text9 CODE >576:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1EC0 text9 CODE >577:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1EC4 text9 CODE >578:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1EC8 text9 CODE >581:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1F4C text9 CODE >582:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1F5C text9 CODE >584:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1954 text8 CODE >617:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1954 text8 CODE >620:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+196A text8 CODE >622:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1988 text8 CODE >623:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+198C text8 CODE >626:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+19AA text8 CODE >629:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+19E4 text8 CODE >631:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+19EA text8 CODE >632:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+19F0 text8 CODE >633:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+19F6 text8 CODE >634:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+19FC text8 CODE >636:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1A80 text8 CODE >637:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1A90 text8 CODE >639:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+17F0 text7 CODE >483:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+17F0 text7 CODE >490:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+17FE text7 CODE >491:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+180A text7 CODE >492:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1816 text7 CODE >493:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1822 text7 CODE >494:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+182E text7 CODE >495:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+183A text7 CODE >497:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+184A text7 CODE >499:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+185A text7 CODE >501:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+185E text7 CODE >502:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1862 text7 CODE >503:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+186A text7 CODE >506:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+187A text7 CODE >508:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+188C text7 CODE >510:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+188E text7 CODE >511:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+189E text7 CODE >513:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+18A6 text7 CODE >518:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+18AE text7 CODE >521:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+18C0 text7 CODE >524:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+18D4 text7 CODE >526:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+18DC text7 CODE >527:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+18DC text7 CODE >528:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+18E0 text7 CODE >529:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+18F2 text7 CODE >531:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+18F6 text7 CODE >532:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+18FA text7 CODE >533:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+18FE text7 CODE >535:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+190C text7 CODE >538:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1910 text7 CODE >539:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1914 text7 CODE >540:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1922 text7 CODE >542:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1926 text7 CODE >543:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+192A text7 CODE >544:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1938 text7 CODE >546:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+193C text7 CODE >547:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1940 text7 CODE >548:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+194E text7 CODE >550:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1952 text7 CODE >553:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2074 text6 CODE >7:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+2074 text6 CODE >13:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+207A text6 CODE >14:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+2088 text6 CODE >15:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+2090 text6 CODE >16:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+2094 text6 CODE >18:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+20A2 text6 CODE >19:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+20AA text6 CODE >20:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+20AE text6 CODE >22:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+20B6 text6 CODE >23:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+20C8 text6 CODE >24:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+20CC text6 CODE >25:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+20D0 text6 CODE >26:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+20D6 text6 CODE >27:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+20D8 text6 CODE >25:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+20E6 text6 CODE >30:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+20EC text6 CODE >31:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+2102 text6 CODE >32:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+210A text6 CODE >33:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+210C text6 CODE >35:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+2112 text6 CODE >36:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+2118 text6 CODE >38:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+2128 text6 CODE >39:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+2130 text6 CODE >40:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+2138 text6 CODE >41:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awdiv.c
+213A text5 CODE >7:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+213A text5 CODE >12:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+2140 text5 CODE >13:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+214E text5 CODE >14:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+2156 text5 CODE >15:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+215A text5 CODE >17:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+2168 text5 CODE >18:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+2170 text5 CODE >19:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+2182 text5 CODE >20:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+2186 text5 CODE >21:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+218A text5 CODE >22:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+2190 text5 CODE >23:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+2192 text5 CODE >21:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+21A0 text5 CODE >26:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+21B6 text5 CODE >27:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+21BE text5 CODE >28:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+21C4 text5 CODE >29:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+21CA text5 CODE >31:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+21DA text5 CODE >32:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+21E2 text5 CODE >33:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+21EA text5 CODE >34:/opt/microchip/xc8/v2.30/pic/sources/c99/common/awmod.c
+24F6 text4 CODE >747:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+24F6 text4 CODE >749:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+24FA text4 CODE >750:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+251A text4 CODE >751:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+252C text4 CODE >752:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+253E text4 CODE >753:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+244A text3 CODE >755:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+244A text3 CODE >757:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2468 text3 CODE >758:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2486 text3 CODE >760:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2498 text3 CODE >761:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+24AA text3 CODE >762:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+14D0 text2 CODE >699:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+14D0 text2 CODE >702:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+14EE text2 CODE >704:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+14F6 text2 CODE >705:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+14FC text2 CODE >706:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1502 text2 CODE >707:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1508 text2 CODE >710:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+152E text2 CODE >712:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1536 text2 CODE >713:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+153A text2 CODE >714:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1542 text2 CODE >715:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+154A text2 CODE >716:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+154A text2 CODE >718:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1570 text2 CODE >720:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1578 text2 CODE >721:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+157C text2 CODE >722:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1584 text2 CODE >723:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+158C text2 CODE >724:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+158C text2 CODE >725:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+15B2 text2 CODE >727:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+15BA text2 CODE >728:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+15BE text2 CODE >729:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+15C6 text2 CODE >730:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+15CE text2 CODE >731:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+15CE text2 CODE >732:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+15F4 text2 CODE >734:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+15FC text2 CODE >735:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1600 text2 CODE >736:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1608 text2 CODE >737:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1610 text2 CODE >738:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1610 text2 CODE >741:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1658 text2 CODE >743:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+1660 text2 CODE >745:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+229C text1 CODE >674:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+229C text1 CODE >677:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+22B0 text1 CODE >680:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+22C0 text1 CODE >681:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+22C4 text1 CODE >682:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+22D6 text1 CODE >685:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+22E6 text1 CODE >686:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+22F8 text1 CODE >687:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+22FC text1 CODE >691:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+230C text1 CODE >692:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+230C text1 CODE >693:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2314 text1 CODE >694:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2324 text1 CODE >695:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+232C text1 CODE >696:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+233C text1 CODE >697:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25F0 text0 CODE >767:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25F0 text0 CODE >769:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25F4 text0 CODE >774:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25F8 text0 CODE >775:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+25FC text0 CODE >776:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2600 text0 CODE >778:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2604 text0 CODE >782:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+2608 text0 CODE >783:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+260C text0 CODE >784:/home/bs2019/e2380368/Desktop/embed_the_2/the2.X/main.c
+24AC cinit CODE >690:/tmp/xcXaJCIDl.s
+24AC cinit CODE >692:/tmp/xcXaJCIDl.s
+24AC cinit CODE >695:/tmp/xcXaJCIDl.s
+24AC cinit CODE >808:/tmp/xcXaJCIDl.s
+24AE cinit CODE >809:/tmp/xcXaJCIDl.s
+24B0 cinit CODE >810:/tmp/xcXaJCIDl.s
+24B2 cinit CODE >811:/tmp/xcXaJCIDl.s
+24B4 cinit CODE >812:/tmp/xcXaJCIDl.s
+24B6 cinit CODE >813:/tmp/xcXaJCIDl.s
+24B8 cinit CODE >814:/tmp/xcXaJCIDl.s
+24BC cinit CODE >815:/tmp/xcXaJCIDl.s
+24C0 cinit CODE >816:/tmp/xcXaJCIDl.s
+24C0 cinit CODE >817:/tmp/xcXaJCIDl.s
+24C2 cinit CODE >818:/tmp/xcXaJCIDl.s
+24C6 cinit CODE >819:/tmp/xcXaJCIDl.s
+24C8 cinit CODE >820:/tmp/xcXaJCIDl.s
+24CA cinit CODE >821:/tmp/xcXaJCIDl.s
+24CC cinit CODE >825:/tmp/xcXaJCIDl.s
+24D0 cinit CODE >826:/tmp/xcXaJCIDl.s
+24D2 cinit CODE >827:/tmp/xcXaJCIDl.s
+24D2 cinit CODE >828:/tmp/xcXaJCIDl.s
+24D4 cinit CODE >829:/tmp/xcXaJCIDl.s
+24D6 cinit CODE >830:/tmp/xcXaJCIDl.s
+24D8 cinit CODE >833:/tmp/xcXaJCIDl.s
+24DC cinit CODE >834:/tmp/xcXaJCIDl.s
+24DE cinit CODE >835:/tmp/xcXaJCIDl.s
+24DE cinit CODE >836:/tmp/xcXaJCIDl.s
+24E0 cinit CODE >837:/tmp/xcXaJCIDl.s
+24E2 cinit CODE >838:/tmp/xcXaJCIDl.s
+24E4 cinit CODE >844:/tmp/xcXaJCIDl.s
+24E4 cinit CODE >846:/tmp/xcXaJCIDl.s
+24E6 cinit CODE >847:/tmp/xcXaJCIDl.s
+24E8 cinit CODE >849:/tmp/xcXaJCIDl.s
+24EA cinit CODE >850:/tmp/xcXaJCIDl.s
+24EC cinit CODE >851:/tmp/xcXaJCIDl.s
+24EE cinit CODE >852:/tmp/xcXaJCIDl.s
+24F0 cinit CODE >853:/tmp/xcXaJCIDl.s
+24F2 cinit CODE >854:/tmp/xcXaJCIDl.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__size_of_InitializeTimerAndInterrupts 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+___awdiv@counter 64 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+check_buttons_rg@state 89 0 BANK0 1 bssBANK0 dist/Simulate/debug/the2.X.debug.o
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/Simulate/debug/the2.X.debug.o
+move_up@ports 7A 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+__Hspace_0 2624 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__Hspace_1 8C 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__Hspace_2 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__Hspace_4 600008 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__end_of_InitializeTimerAndInterrupts 25F0 0 CODE 0 text13 dist/Simulate/debug/the2.X.debug.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/Simulate/debug/the2.X.debug.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/xcXgNbaAh.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/Simulate/debug/the2.X.debug.o
+_LATD_value 4F 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+__end_ofi2_parse_and_assign 25BE 0 CODE 0 text22 dist/Simulate/debug/the2.X.debug.o
+__Lsmallconst 1000 0 SMALLCONST 0 smallconst dist/Simulate/debug/the2.X.debug.o
+_Init 23E0 0 CODE 0 text14 dist/Simulate/debug/the2.X.debug.o
+_LATA F89 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_LATB F8A 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_LATC F8B 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_LATD F8C 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_LATE F8D 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_LATF F8E 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_LATG F8F 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+___sp 0 0 STACK 2 stack /tmp/xcXgNbaAh.o
+_main 25F0 0 CODE 0 text0 dist/Simulate/debug/the2.X.debug.o
+btemp 57 0 COMRAM 1 temp dist/Simulate/debug/the2.X.debug.o
+start E 0 CODE 0 init /tmp/xcXgNbaAh.o
+__size_of___awdiv 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__size_of___awmod 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__size_of_Init 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__size_of_main 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_segmentCodes 1001 0 SMALLCONST 0 smallconst dist/Simulate/debug/the2.X.debug.o
+displayDigit@digit 60 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+_blink_flag 43 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+check_buttons_rg@currentButtonRead 81 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+_is_active 37 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+__size_ofi2_move_down 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__Hpowerup E 0 CODE 0 powerup dist/Simulate/debug/the2.X.debug.o
+__size_of_show_piece 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+___awmod@sign 65 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+_T0CONbits FD5 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__end_of_move_down 1BD0 0 CODE 0 text11 dist/Simulate/debug/the2.X.debug.o
+__end_of_move_left 2074 0 CODE 0 text10 dist/Simulate/debug/the2.X.debug.o
+ttemp5 58 0 COMRAM 1 temp dist/Simulate/debug/the2.X.debug.o
+ttemp6 5B 0 COMRAM 1 temp dist/Simulate/debug/the2.X.debug.o
+ttemp7 5F 0 COMRAM 1 temp dist/Simulate/debug/the2.X.debug.o
+_spawn_piece 229C 0 CODE 0 text1 dist/Simulate/debug/the2.X.debug.o
+__LnvCOMRAM 0 0 ABS 0 nvCOMRAM dist/Simulate/debug/the2.X.debug.o
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/Simulate/debug/the2.X.debug.o
+__size_of_move_down 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__size_of_move_left 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__accesstop 60 0 ABS 0 - /tmp/xcXgNbaAh.o
+intlevel0 0 0 CODE 0 text /tmp/xcXgNbaAh.o
+intlevel1 0 0 CODE 0 text /tmp/xcXgNbaAh.o
+intlevel2 0 0 CODE 0 text /tmp/xcXgNbaAh.o
+intlevel3 0 0 CODE 0 text /tmp/xcXgNbaAh.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+i2_parse_and_assign 2580 0 CODE 0 text22 dist/Simulate/debug/the2.X.debug.o
+_total_pieces 86 0 BANK0 1 bssBANK0 dist/Simulate/debug/the2.X.debug.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/Simulate/debug/the2.X.debug.o
+wtemp8 58 0 COMRAM 1 temp dist/Simulate/debug/the2.X.debug.o
+parse_and_assign@ports 64 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+parse_and_assign@value 60 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+__Hifardata 0 0 CODE 0 ifardata dist/Simulate/debug/the2.X.debug.o
+___awdiv@sign 65 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+__Hclrtext 0 0 ABS 0 clrtext dist/Simulate/debug/the2.X.debug.o
+i2parse_and_assign@ports 5 0 COMRAM 1 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+_LATC_flag 3F 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+i2parse_and_assign@value 1 0 COMRAM 1 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+__pidataCOMRAM 2620 0 CODE 0 idataCOMRAM dist/Simulate/debug/the2.X.debug.o
+_move_down 1A92 0 CODE 0 text11 dist/Simulate/debug/the2.X.debug.o
+_move_left 1F5E 0 CODE 0 text10 dist/Simulate/debug/the2.X.debug.o
+__end_of_HandleInterrupt 14D0 0 CODE 0 intcode_body dist/Simulate/debug/the2.X.debug.o
+_LATD_flag 3D 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+_LATE_flag 3B 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+___awdiv@dividend 60 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+_LATF_flag 39 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+___inthi_sp 0 0 STACK 2 stack /tmp/xcXgNbaAh.o
+___intlo_sp 0 0 STACK 2 stack /tmp/xcXgNbaAh.o
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/Simulate/debug/the2.X.debug.o
+__Hintcode_body 0 0 ABS 0 intcode_body dist/Simulate/debug/the2.X.debug.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/Simulate/debug/the2.X.debug.o
+__end_of_segmentCodes 100B 0 SMALLCONST 0 smallconst dist/Simulate/debug/the2.X.debug.o
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/Simulate/debug/the2.X.debug.o
+__Hintcodelo E 0 CODE 0 intcodelo dist/Simulate/debug/the2.X.debug.o
+___awdiv@divisor 62 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+__size_of_move_right 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__end_of___awdiv 213A 0 CODE 0 text6 dist/Simulate/debug/the2.X.debug.o
+__end_of___awmod 21EC 0 CODE 0 text5 dist/Simulate/debug/the2.X.debug.o
+_can_submit 52 0 COMRAM 1 dataCOMRAM dist/Simulate/debug/the2.X.debug.o
+?i2___awmod 1 0 COMRAM 1 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+i2move_down@ports 1B 0 COMRAM 1 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+i2_show_piece 1662 0 CODE 0 text16 dist/Simulate/debug/the2.X.debug.o
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/Simulate/debug/the2.X.debug.o
+_HandleInterrupt 8 0 CODE 0 intcode dist/Simulate/debug/the2.X.debug.o
+__HnvCOMRAM 0 0 ABS 0 nvCOMRAM dist/Simulate/debug/the2.X.debug.o
+_INTCON3bits FF0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__Lintcodelo E 0 CODE 0 intcodelo dist/Simulate/debug/the2.X.debug.o
+start_initialization 24AC 0 CODE 0 cinit dist/Simulate/debug/the2.X.debug.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/Simulate/debug/the2.X.debug.o
+___rparam_used 1 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_LATE_value 4E 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+__pcstackBANK0 60 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+_parse_and_assign 2540 0 CODE 0 text12 dist/Simulate/debug/the2.X.debug.o
+submit_piece@ports 7 0 COMRAM 1 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+displayNumber@units 6C 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+__size_ofi2_show_piece 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__Hbank0 0 0 ABS 0 bank0 dist/Simulate/debug/the2.X.debug.o
+__Hbank1 0 0 ABS 0 bank1 dist/Simulate/debug/the2.X.debug.o
+__Hbank2 0 0 ABS 0 bank2 dist/Simulate/debug/the2.X.debug.o
+__Hbank3 0 0 ABS 0 bank3 dist/Simulate/debug/the2.X.debug.o
+__Hbank4 0 0 ABS 0 bank4 dist/Simulate/debug/the2.X.debug.o
+__Hbank5 0 0 ABS 0 bank5 dist/Simulate/debug/the2.X.debug.o
+__Hbank6 0 0 ABS 0 bank6 dist/Simulate/debug/the2.X.debug.o
+__Hbank7 0 0 ABS 0 bank7 dist/Simulate/debug/the2.X.debug.o
+__Hbank8 0 0 ABS 0 bank8 dist/Simulate/debug/the2.X.debug.o
+__Hbank9 0 0 ABS 0 bank9 dist/Simulate/debug/the2.X.debug.o
+__Hcinit 0 0 ABS 0 cinit dist/Simulate/debug/the2.X.debug.o
+__Hconst 0 0 CONST 0 const dist/Simulate/debug/the2.X.debug.o
+__Hidata 0 0 CODE 0 idata dist/Simulate/debug/the2.X.debug.o
+__Hidloc 0 0 ABS 0 idloc dist/Simulate/debug/the2.X.debug.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/Simulate/debug/the2.X.debug.o
+__Hparam 0 0 COMRAM 1 rparam dist/Simulate/debug/the2.X.debug.o
+__Hrdata 0 0 COMRAM 1 rdata dist/Simulate/debug/the2.X.debug.o
+__Hstack 0 0 STACK 2 stack dist/Simulate/debug/the2.X.debug.o
+__Htext0 0 0 ABS 0 text0 dist/Simulate/debug/the2.X.debug.o
+__Htext1 0 0 ABS 0 text1 dist/Simulate/debug/the2.X.debug.o
+__Htext2 0 0 ABS 0 text2 dist/Simulate/debug/the2.X.debug.o
+__Htext3 0 0 ABS 0 text3 dist/Simulate/debug/the2.X.debug.o
+__Htext4 0 0 ABS 0 text4 dist/Simulate/debug/the2.X.debug.o
+__Htext5 0 0 ABS 0 text5 dist/Simulate/debug/the2.X.debug.o
+__Htext6 0 0 ABS 0 text6 dist/Simulate/debug/the2.X.debug.o
+__Htext7 0 0 ABS 0 text7 dist/Simulate/debug/the2.X.debug.o
+__Htext8 0 0 ABS 0 text8 dist/Simulate/debug/the2.X.debug.o
+__Htext9 0 0 ABS 0 text9 dist/Simulate/debug/the2.X.debug.o
+__Hbank10 0 0 ABS 0 bank10 dist/Simulate/debug/the2.X.debug.o
+__Hbank11 0 0 ABS 0 bank11 dist/Simulate/debug/the2.X.debug.o
+__Hbank12 0 0 ABS 0 bank12 dist/Simulate/debug/the2.X.debug.o
+__Hbank13 0 0 ABS 0 bank13 dist/Simulate/debug/the2.X.debug.o
+__Hbank14 0 0 ABS 0 bank14 dist/Simulate/debug/the2.X.debug.o
+__Hbank15 0 0 ABS 0 bank15 dist/Simulate/debug/the2.X.debug.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/Simulate/debug/the2.X.debug.o
+__Hbigram 0 0 ABS 0 bigram dist/Simulate/debug/the2.X.debug.o
+__smallconst 1000 0 SMALLCONST 0 smallconst /tmp/xcXgNbaAh.o
+__size_of_move_up 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__Hcomram 0 0 ABS 0 comram dist/Simulate/debug/the2.X.debug.o
+__Hconfig 300008 0 CONFIG 4 config dist/Simulate/debug/the2.X.debug.o
+i2_move_down 1D0C 0 CODE 0 text17 dist/Simulate/debug/the2.X.debug.o
+_displayDigit 24F6 0 CODE 0 text4 dist/Simulate/debug/the2.X.debug.o
+__Lbank0 0 0 ABS 0 bank0 dist/Simulate/debug/the2.X.debug.o
+__Lbank1 0 0 ABS 0 bank1 dist/Simulate/debug/the2.X.debug.o
+__Lbank2 0 0 ABS 0 bank2 dist/Simulate/debug/the2.X.debug.o
+__Lbank3 0 0 ABS 0 bank3 dist/Simulate/debug/the2.X.debug.o
+__Lbank4 0 0 ABS 0 bank4 dist/Simulate/debug/the2.X.debug.o
+__Lbank5 0 0 ABS 0 bank5 dist/Simulate/debug/the2.X.debug.o
+__Lbank6 0 0 ABS 0 bank6 dist/Simulate/debug/the2.X.debug.o
+__Lbank7 0 0 ABS 0 bank7 dist/Simulate/debug/the2.X.debug.o
+__Lbank8 0 0 ABS 0 bank8 dist/Simulate/debug/the2.X.debug.o
+__Lbank9 0 0 ABS 0 bank9 dist/Simulate/debug/the2.X.debug.o
+__Lcinit 0 0 ABS 0 cinit dist/Simulate/debug/the2.X.debug.o
+__Lconst 0 0 CONST 0 const dist/Simulate/debug/the2.X.debug.o
+__Lidata 0 0 CODE 0 idata dist/Simulate/debug/the2.X.debug.o
+__Lidloc 0 0 ABS 0 idloc dist/Simulate/debug/the2.X.debug.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/Simulate/debug/the2.X.debug.o
+__Lparam 0 0 COMRAM 1 rparam dist/Simulate/debug/the2.X.debug.o
+__Lrdata 0 0 COMRAM 1 rdata dist/Simulate/debug/the2.X.debug.o
+__Lstack 0 0 STACK 2 stack dist/Simulate/debug/the2.X.debug.o
+__Ltext0 0 0 ABS 0 text0 dist/Simulate/debug/the2.X.debug.o
+__Ltext1 0 0 ABS 0 text1 dist/Simulate/debug/the2.X.debug.o
+__Ltext2 0 0 ABS 0 text2 dist/Simulate/debug/the2.X.debug.o
+__Ltext3 0 0 ABS 0 text3 dist/Simulate/debug/the2.X.debug.o
+__Ltext4 0 0 ABS 0 text4 dist/Simulate/debug/the2.X.debug.o
+__Ltext5 0 0 ABS 0 text5 dist/Simulate/debug/the2.X.debug.o
+__Ltext6 0 0 ABS 0 text6 dist/Simulate/debug/the2.X.debug.o
+__Ltext7 0 0 ABS 0 text7 dist/Simulate/debug/the2.X.debug.o
+__Ltext8 0 0 ABS 0 text8 dist/Simulate/debug/the2.X.debug.o
+__Ltext9 0 0 ABS 0 text9 dist/Simulate/debug/the2.X.debug.o
+__end_ofi2_show_piece 17F0 0 CODE 0 text16 dist/Simulate/debug/the2.X.debug.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/Simulate/debug/the2.X.debug.o
+__Lintcode_body 0 0 ABS 0 intcode_body dist/Simulate/debug/the2.X.debug.o
+_PORTBbits F81 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_PORTGbits F86 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_INTCONbits FF2 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__Habs1 0 0 ABS 0 abs1 dist/Simulate/debug/the2.X.debug.o
+__Hdata 0 0 ABS 0 data dist/Simulate/debug/the2.X.debug.o
+__Hinit 12 0 CODE 0 init dist/Simulate/debug/the2.X.debug.o
+__Hrbit 0 0 COMRAM 1 rbit dist/Simulate/debug/the2.X.debug.o
+__Hrbss 0 0 COMRAM 1 rbss dist/Simulate/debug/the2.X.debug.o
+__Htemp 58 0 COMRAM 1 temp dist/Simulate/debug/the2.X.debug.o
+__Htext 0 0 ABS 0 text dist/Simulate/debug/the2.X.debug.o
+__Labs1 0 0 ABS 0 abs1 dist/Simulate/debug/the2.X.debug.o
+__Ldata 0 0 ABS 0 data dist/Simulate/debug/the2.X.debug.o
+__Linit E 0 CODE 0 init dist/Simulate/debug/the2.X.debug.o
+__Lrbit 0 0 COMRAM 1 rbit dist/Simulate/debug/the2.X.debug.o
+__Lrbss 0 0 COMRAM 1 rbss dist/Simulate/debug/the2.X.debug.o
+__Ltemp 57 0 COMRAM 1 temp dist/Simulate/debug/the2.X.debug.o
+__Ltext 0 0 ABS 0 text dist/Simulate/debug/the2.X.debug.o
+_Button_Press 8B 0 BANK0 1 bssBANK0 dist/Simulate/debug/the2.X.debug.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+int$flags 57 0 COMRAM 1 temp dist/Simulate/debug/the2.X.debug.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+__size_of_HandleInterrupt 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__Hintret 0 0 ABS 0 intret dist/Simulate/debug/the2.X.debug.o
+__Hirdata 0 0 CODE 0 irdata dist/Simulate/debug/the2.X.debug.o
+displayNumber@number 68 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+__S0 2624 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__S1 8C 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__S2 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__S4 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__S5 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+move_left@ports 7D 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+move_left@temp1 7C 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+move_left@temp2 7B 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+__size_ofi2_parse_and_assign 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__pnvCOMRAM 56 0 COMRAM 1 nvCOMRAM dist/Simulate/debug/the2.X.debug.o
+check_buttons_rg@buttonCount 88 0 BANK0 1 bssBANK0 dist/Simulate/debug/the2.X.debug.o
+__end_of_spawn_piece 233E 0 CODE 0 text1 dist/Simulate/debug/the2.X.debug.o
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/Simulate/debug/the2.X.debug.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/Simulate/debug/the2.X.debug.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/Simulate/debug/the2.X.debug.o
+__size_of_displayDigit 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+i2___awmod@dividend 1 0 COMRAM 1 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+__end_of_parse_and_assign 2580 0 CODE 0 text12 dist/Simulate/debug/the2.X.debug.o
+int_func 1324 0 CODE 0 intcode_body dist/Simulate/debug/the2.X.debug.o
+__Lintentry 0 0 ABS 0 intentry dist/Simulate/debug/the2.X.debug.o
+i2___awmod@counter 5 0 COMRAM 1 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+__Hramtop 1000 0 RAM 0 ramtop dist/Simulate/debug/the2.X.debug.o
+__size_of_parse_and_assign 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__Hrparam 0 0 COMRAM 1 rparam dist/Simulate/debug/the2.X.debug.o
+__activetblptr 1 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__Hstruct 0 0 COMRAM 1 struct dist/Simulate/debug/the2.X.debug.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 dist/Simulate/debug/the2.X.debug.o
+__Htext10 0 0 ABS 0 text10 dist/Simulate/debug/the2.X.debug.o
+__Htext11 0 0 ABS 0 text11 dist/Simulate/debug/the2.X.debug.o
+__Htext12 0 0 ABS 0 text12 dist/Simulate/debug/the2.X.debug.o
+__Htext13 0 0 ABS 0 text13 dist/Simulate/debug/the2.X.debug.o
+__Htext14 0 0 ABS 0 text14 dist/Simulate/debug/the2.X.debug.o
+__Htext16 0 0 ABS 0 text16 dist/Simulate/debug/the2.X.debug.o
+__Htext17 0 0 ABS 0 text17 dist/Simulate/debug/the2.X.debug.o
+__Htext18 0 0 ABS 0 text18 dist/Simulate/debug/the2.X.debug.o
+__Htext19 0 0 ABS 0 text19 dist/Simulate/debug/the2.X.debug.o
+__Htext20 0 0 ABS 0 text20 dist/Simulate/debug/the2.X.debug.o
+__Htext21 0 0 ABS 0 text21 dist/Simulate/debug/the2.X.debug.o
+__Htext22 0 0 ABS 0 text22 dist/Simulate/debug/the2.X.debug.o
+i2show_piece@ports 7 0 COMRAM 1 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+_displayNumber 244A 0 CODE 0 text3 dist/Simulate/debug/the2.X.debug.o
+displayDigit@position 62 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+___awmod@counter 64 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+__end_of_displayDigit 2540 0 CODE 0 text4 dist/Simulate/debug/the2.X.debug.o
+__ptext10 1F5E 0 CODE 0 text10 dist/Simulate/debug/the2.X.debug.o
+__ptext11 1A92 0 CODE 0 text11 dist/Simulate/debug/the2.X.debug.o
+__ptext12 2540 0 CODE 0 text12 dist/Simulate/debug/the2.X.debug.o
+__ptext13 25BE 0 CODE 0 text13 dist/Simulate/debug/the2.X.debug.o
+__ptext14 23E0 0 CODE 0 text14 dist/Simulate/debug/the2.X.debug.o
+__ptext16 1662 0 CODE 0 text16 dist/Simulate/debug/the2.X.debug.o
+__ptext17 1D0C 0 CODE 0 text17 dist/Simulate/debug/the2.X.debug.o
+__ptext18 1BD0 0 CODE 0 text18 dist/Simulate/debug/the2.X.debug.o
+__ptext19 233E 0 CODE 0 text19 dist/Simulate/debug/the2.X.debug.o
+__ptext20 21EC 0 CODE 0 text20 dist/Simulate/debug/the2.X.debug.o
+__ptext21 100C 0 CODE 0 text21 dist/Simulate/debug/the2.X.debug.o
+__ptext22 2580 0 CODE 0 text22 dist/Simulate/debug/the2.X.debug.o
+__end_of_move_up 1A92 0 CODE 0 text8 dist/Simulate/debug/the2.X.debug.o
+___awdiv 2074 0 CODE 0 text6 dist/Simulate/debug/the2.X.debug.o
+___awmod 213A 0 CODE 0 text5 dist/Simulate/debug/the2.X.debug.o
+__pintcode_body 1324 0 CODE 0 intcode_body dist/Simulate/debug/the2.X.debug.o
+show_piece@ports 66 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+__Lbank10 0 0 ABS 0 bank10 dist/Simulate/debug/the2.X.debug.o
+__Lbank11 0 0 ABS 0 bank11 dist/Simulate/debug/the2.X.debug.o
+__Lbank12 0 0 ABS 0 bank12 dist/Simulate/debug/the2.X.debug.o
+__Lbank13 0 0 ABS 0 bank13 dist/Simulate/debug/the2.X.debug.o
+__Lbank14 0 0 ABS 0 bank14 dist/Simulate/debug/the2.X.debug.o
+__Lbank15 0 0 ABS 0 bank15 dist/Simulate/debug/the2.X.debug.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/Simulate/debug/the2.X.debug.o
+__Lbigram 0 0 ABS 0 bigram dist/Simulate/debug/the2.X.debug.o
+i2_spawn_piece 233E 0 CODE 0 text19 dist/Simulate/debug/the2.X.debug.o
+__Lcomram 0 0 ABS 0 comram dist/Simulate/debug/the2.X.debug.o
+__Lconfig 0 0 CONFIG 4 config dist/Simulate/debug/the2.X.debug.o
+_prev_piece 54 0 COMRAM 1 dataCOMRAM dist/Simulate/debug/the2.X.debug.o
+_LATC_old 4C 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+_LATD_old 4B 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+_LATE_old 4A 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+_LATF_old 49 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+_submit_piece 1BD0 0 CODE 0 text18 dist/Simulate/debug/the2.X.debug.o
+_buttonCount 47 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+_buttonState 48 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+_LATF_value 4D 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/Simulate/debug/the2.X.debug.o
+__Lfardata 0 0 FARRAM 0 fardata dist/Simulate/debug/the2.X.debug.o
+_show_piece 14D0 0 CODE 0 text2 dist/Simulate/debug/the2.X.debug.o
+displayNumber@tens 6A 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+stackhi EF3 0 ABS 0 - /tmp/xcXgNbaAh.o
+stacklo 8C 0 ABS 0 - /tmp/xcXgNbaAh.o
+__Lintcode 8 0 CODE 0 intcode dist/Simulate/debug/the2.X.debug.o
+__Lintret 0 0 ABS 0 intret dist/Simulate/debug/the2.X.debug.o
+__Lirdata 0 0 CODE 0 irdata dist/Simulate/debug/the2.X.debug.o
+__end_ofi2___awmod 229C 0 CODE 0 text20 dist/Simulate/debug/the2.X.debug.o
+__Lspace_0 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__Lspace_1 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__Lspace_2 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__Lspace_4 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__size_ofi2___awmod 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__pbssCOMRAM 2D 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+_InitializeTimerAndInterrupts 25BE 0 CODE 0 text13 dist/Simulate/debug/the2.X.debug.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+_active_piece_first 82 0 BANK0 1 bssBANK0 dist/Simulate/debug/the2.X.debug.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+end_of_initialization 24E4 0 CODE 0 cinit dist/Simulate/debug/the2.X.debug.o
+_active_piece_record 2D 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/Simulate/debug/the2.X.debug.o
+__Hintentry 0 0 ABS 0 intentry dist/Simulate/debug/the2.X.debug.o
+_RCONbits FD0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__size_of_submit_piece 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+___awdiv@quotient 66 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+?___awdiv 60 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+?___awmod 60 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+i2___awmod 21EC 0 CODE 0 text20 dist/Simulate/debug/the2.X.debug.o
+_LATC_value 50 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+__Hreset_vec 4 0 CODE 0 reset_vec dist/Simulate/debug/the2.X.debug.o
+__HbssBANK0 0 0 ABS 0 bssBANK0 dist/Simulate/debug/the2.X.debug.o
+_two_seconds_counter 41 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+___awmod@dividend 60 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+__Lramtop 1000 0 RAM 0 ramtop dist/Simulate/debug/the2.X.debug.o
+__Lrparam 0 0 COMRAM 1 rparam dist/Simulate/debug/the2.X.debug.o
+__pcinit 24AC 0 CODE 0 cinit dist/Simulate/debug/the2.X.debug.o
+__ptext0 25F0 0 CODE 0 text0 dist/Simulate/debug/the2.X.debug.o
+__ptext1 229C 0 CODE 0 text1 dist/Simulate/debug/the2.X.debug.o
+__ptext2 14D0 0 CODE 0 text2 dist/Simulate/debug/the2.X.debug.o
+__ptext3 244A 0 CODE 0 text3 dist/Simulate/debug/the2.X.debug.o
+__ptext4 24F6 0 CODE 0 text4 dist/Simulate/debug/the2.X.debug.o
+__ptext5 213A 0 CODE 0 text5 dist/Simulate/debug/the2.X.debug.o
+__ptext6 2074 0 CODE 0 text6 dist/Simulate/debug/the2.X.debug.o
+__ptext7 17F0 0 CODE 0 text7 dist/Simulate/debug/the2.X.debug.o
+__ptext8 1954 0 CODE 0 text8 dist/Simulate/debug/the2.X.debug.o
+__ptext9 1E44 0 CODE 0 text9 dist/Simulate/debug/the2.X.debug.o
+_active_piece 31 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+__Lstruct 0 0 COMRAM 1 struct dist/Simulate/debug/the2.X.debug.o
+__size_of_displayNumber 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__Ltext10 0 0 ABS 0 text10 dist/Simulate/debug/the2.X.debug.o
+__Ltext11 0 0 ABS 0 text11 dist/Simulate/debug/the2.X.debug.o
+__Ltext12 0 0 ABS 0 text12 dist/Simulate/debug/the2.X.debug.o
+__Ltext13 0 0 ABS 0 text13 dist/Simulate/debug/the2.X.debug.o
+__Ltext14 0 0 ABS 0 text14 dist/Simulate/debug/the2.X.debug.o
+__Ltext16 0 0 ABS 0 text16 dist/Simulate/debug/the2.X.debug.o
+__Ltext17 0 0 ABS 0 text17 dist/Simulate/debug/the2.X.debug.o
+__Ltext18 0 0 ABS 0 text18 dist/Simulate/debug/the2.X.debug.o
+__Ltext19 0 0 ABS 0 text19 dist/Simulate/debug/the2.X.debug.o
+__Ltext20 0 0 ABS 0 text20 dist/Simulate/debug/the2.X.debug.o
+__Ltext21 0 0 ABS 0 text21 dist/Simulate/debug/the2.X.debug.o
+__Ltext22 0 0 ABS 0 text22 dist/Simulate/debug/the2.X.debug.o
+__ramtop 1000 0 RAM 0 ramtop /tmp/xcXgNbaAh.o
+__size_of_spawn_piece 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_rotate_piece 100C 0 CODE 0 text21 dist/Simulate/debug/the2.X.debug.o
+_check_buttons_rg 17F0 0 CODE 0 text7 dist/Simulate/debug/the2.X.debug.o
+move_down@ports 7A 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+__Lpowerup E 0 CODE 0 powerup dist/Simulate/debug/the2.X.debug.o
+__end_of_show_piece 1662 0 CODE 0 text2 dist/Simulate/debug/the2.X.debug.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/Simulate/debug/the2.X.debug.o
+i2___awmod@divisor 3 0 COMRAM 1 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+__end_of_submit_piece 1D0C 0 CODE 0 text18 dist/Simulate/debug/the2.X.debug.o
+_move_right 1E44 0 CODE 0 text9 dist/Simulate/debug/the2.X.debug.o
+__psmallconst 1000 0 SMALLCONST 0 smallconst dist/Simulate/debug/the2.X.debug.o
+rotate_piece@temp_543 20 0 COMRAM 1 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+rotate_piece@temp_544 21 0 COMRAM 1 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+rotate_piece@temp_545 22 0 COMRAM 1 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+rotate_piece@temp_546 23 0 COMRAM 1 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+rotate_piece@temp_547 24 0 COMRAM 1 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+rotate_piece@temp_549 25 0 COMRAM 1 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+rotate_piece@temp_550 26 0 COMRAM 1 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/Simulate/debug/the2.X.debug.o
+rotate_piece@port 27 0 COMRAM 1 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+rotate_piece@temp 1F 0 COMRAM 1 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+__size_ofi2_spawn_piece 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+i2___awmod@sign 6 0 COMRAM 1 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+__end_ofi2_move_down 1E44 0 CODE 0 text17 dist/Simulate/debug/the2.X.debug.o
+___param_bank 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/Simulate/debug/the2.X.debug.o
+__end_of__initialization 24E4 0 CODE 0 cinit dist/Simulate/debug/the2.X.debug.o
+___awmod@divisor 62 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+__Libigdata 0 0 CODE 0 ibigdata dist/Simulate/debug/the2.X.debug.o
+_Temp_Press 8A 0 BANK0 1 bssBANK0 dist/Simulate/debug/the2.X.debug.o
+__Lclrtext 0 0 ABS 0 clrtext dist/Simulate/debug/the2.X.debug.o
+__end_of_displayNumber 24AC 0 CODE 0 text3 dist/Simulate/debug/the2.X.debug.o
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/Simulate/debug/the2.X.debug.o
+__size_of_rotate_piece 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__end_ofi2_spawn_piece 23E0 0 CODE 0 text19 dist/Simulate/debug/the2.X.debug.o
+__end_of_Init 244A 0 CODE 0 text14 dist/Simulate/debug/the2.X.debug.o
+__end_of_main 2620 0 CODE 0 text0 dist/Simulate/debug/the2.X.debug.o
+__pintcode 8 0 CODE 0 intcode dist/Simulate/debug/the2.X.debug.o
+move_right@ports 7D 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+move_right@temp0 7C 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+move_right@temp1 7B 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+move_right@temp2 7A 0 BANK0 1 cstackBANK0 dist/Simulate/debug/the2.X.debug.o
+_PORTA F80 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_PORTB F81 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_PORTC F82 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_PORTD F83 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_PORTE F84 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_PORTF F85 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_PORTG F86 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_PORTH F87 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_PORTJ F88 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_TMR0H FD7 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_TMR0L FD6 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_TRISA F92 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_TRISB F93 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_TRISC F94 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_TRISD F95 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_TRISE F96 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_TRISF F97 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_TRISG F98 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_TRISH F99 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+_TRISJ F9A 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__HRAM 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__Hbss 0 0 RAM 1 bss dist/Simulate/debug/the2.X.debug.o
+__Hram 0 0 ABS 0 ram dist/Simulate/debug/the2.X.debug.o
+__Hsfr 0 0 ABS 0 sfr dist/Simulate/debug/the2.X.debug.o
+__LRAM 1 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+__Lbss 0 0 RAM 1 bss dist/Simulate/debug/the2.X.debug.o
+__Lram 0 0 ABS 0 ram dist/Simulate/debug/the2.X.debug.o
+__Lsfr 0 0 ABS 0 sfr dist/Simulate/debug/the2.X.debug.o
+_prevB 51 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+___extmem_base 20000 0 ABS 0 - /tmp/xcXgNbaAh.o
+__end_of_move_right 1F5E 0 CODE 0 text9 dist/Simulate/debug/the2.X.debug.o
+__end_of_rotate_piece 1324 0 CODE 0 text21 dist/Simulate/debug/the2.X.debug.o
+__initialization 24AC 0 CODE 0 cinit dist/Simulate/debug/the2.X.debug.o
+__pbssBANK0 82 0 BANK0 1 bssBANK0 dist/Simulate/debug/the2.X.debug.o
+__pdataCOMRAM 52 0 COMRAM 1 dataCOMRAM dist/Simulate/debug/the2.X.debug.o
+_lastRBState 56 0 COMRAM 1 nvCOMRAM dist/Simulate/debug/the2.X.debug.o
+__Hfardata 0 0 FARRAM 0 fardata dist/Simulate/debug/the2.X.debug.o
+__Hsmallconst 100C 0 SMALLCONST 0 smallconst dist/Simulate/debug/the2.X.debug.o
+__end_of_check_buttons_rg 1954 0 CODE 0 text7 dist/Simulate/debug/the2.X.debug.o
+_move_up 1954 0 CODE 0 text8 dist/Simulate/debug/the2.X.debug.o
+_rotate_counter 35 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+__Lifardata 0 0 CODE 0 ifardata dist/Simulate/debug/the2.X.debug.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/Simulate/debug/the2.X.debug.o
+__Hintcode E 0 CODE 0 intcode dist/Simulate/debug/the2.X.debug.o
+_port_c_decimal 45 0 COMRAM 1 bssCOMRAM dist/Simulate/debug/the2.X.debug.o
+__size_of_check_buttons_rg 0 0 ABS 0 - dist/Simulate/debug/the2.X.debug.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text21 0 100C 100C 1618 1
+cstackCOMRAM 1 1 1 57 1
+cstackBANK0 1 60 60 2C 1
+reset_vec 0 0 0 4 1
+intcode 0 8 8 A 1
+smallconst 0 1000 1000 C 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES

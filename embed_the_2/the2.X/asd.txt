@@ -1,0 +1,451 @@
+#include <xc.h>
+#include <stdint.h>
+
+// ============================ //
+// Do not edit this part!!!!    //
+// ============================ //
+// 0x300001 - CONFIG1H
+#pragma config OSC = HSPLL // Oscillator Selection bits (HS oscillator,
+                           // PLL enabled (Clock Frequency = 4 x FOSC1))
+#pragma config FCMEN = OFF // Fail-Safe Clock Monitor Enable bit
+                           // (Fail-Safe Clock Monitor disabled)
+#pragma config IESO = OFF  // Internal/External Oscillator Switchover bit
+                           // (Oscillator Switchover mode disabled)
+// 0x300002 - CONFIG2L
+#pragma config PWRT = OFF  // Power-up Timer Enable bit (PWRT disabled)
+#pragma config BOREN = OFF // Brown-out Reset Enable bits (Brown-out
+                           // Reset disabled in hardware and software)
+// 0x300003 - CONFIG1H
+#pragma config WDT = OFF // Watchdog Timer Enable bit
+                         // (WDT disabled (control is placed on the SWDTEN bit))
+// 0x300004 - CONFIG3L
+// 0x300005 - CONFIG3H
+#pragma config LPT1OSC = OFF // Low-Power Timer1 Oscillator Enable bit
+                             // (Timer1 configured for higher power operation)
+#pragma config MCLRE = ON    // MCLR Pin Enable bit (MCLR pin enabled;
+                             // RE3 input pin disabled)
+// 0x300006 - CONFIG4L
+#pragma config LVP = OFF   // Single-Supply ICSP Enable bit (Single-Supply
+                           // ICSP disabled)
+#pragma config XINST = OFF // Extended Instruction Set Enable bit
+                           // (Instruction set extension and Indexed
+                           // Addressing mode disabled (Legacy mode))
+
+#pragma config DEBUG = OFF // Disable In-Circuit Debugger
+
+#define KHZ 1000UL
+#define MHZ (KHZ * KHZ)
+#define _XTAL_FREQ (40UL * MHZ)
+#define MIN_BUTTON_COUNT 30
+
+// ============================ //
+//         Declarations         //
+// ============================ //
+
+volatile uint8_t prevB;
+int prev_piece = 1;
+int port_c_decimal;
+int blink_flag = 0;
+int two_seconds_counter = 0;
+uint32_t active_piece = 0;
+uint32_t active_piece_record;
+uint8_t LATC_value;
+uint8_t LATD_value;
+uint8_t LATE_value;
+uint8_t LATF_value;
+int LATC_flag = 0;
+int LATD_flag = 0;
+int LATE_flag = 0;
+int LATF_flag = 0;
+uint8_t LATC_old;
+uint8_t LATD_old;
+uint8_t LATE_old;
+uint8_t LATF_old;
+int is_active = 0;
+int is_at_bottom = 0;
+volatile uint8_t lastRBState;
+
+typedef enum
+{
+    Waiting,
+    Detected,
+    WaitForRelease,
+    Update
+} ButtonState;
+
+typedef union
+{
+    uint8_t Full;
+    struct
+    {
+        uint8_t B0 : 1;
+        uint8_t B1 : 1;
+        uint8_t B2 : 1;
+        uint8_t B3 : 1;
+        uint8_t B4 : 1;
+        uint8_t B5 : 1;
+        uint8_t B6 : 1;
+        uint8_t B7 : 1;
+    };
+} Button_Type;
+
+Button_Type Button_Press, Temp_Press;
+
+void shift_down_piece(uint32_t *active_piece);
+uint8_t *parse_and_assign(uint32_t value);
+void ProcessButtonPress(void);
+void freeze_piece(void);
+void spawn_piece(void);
+
+// ============================ //
+//        Initialization        //
+// ============================ //
+
+void Init()
+{
+
+    // A
+    TRISA = 0x0F; // Controller
+    LATA = 0x00;
+    PORTA = 0x00;
+
+    // B
+    TRISB = 0xF0; // Interrupts
+    PORTB = 0x00;
+    LATB = PORTB;
+
+    // Game Area
+
+    // C
+    TRISC = 0x00;
+    LATC = 0x00;
+    PORTC = 0x00;
+
+    // D
+    TRISD = 0x00;
+    LATD = 0x00;
+    PORTD = 0x00;
+
+    // E
+    TRISE = 0x00;
+    LATE = 0x00;
+    PORTE = 0x00;
+
+    // F
+    TRISF = 0x00;
+    LATF = 0x00;
+    PORTF = 0x00;
+
+    // G
+    TRISG = 0x00;
+    LATG = 0x00;
+    PORTG = 0x00;
+
+    // 7-segment display
+    TRISH = 0x00;
+    PORTH = 0x00;
+    LATH = 0x0F;
+
+    TRISJ = 0x00;
+    PORTJ = 0x00;
+    LATJ = 0x3F;
+
+    lastRBState = PORTB;
+}
+
+void InitializeTimerAndInterrupts()
+{
+    // Enable Interrupts
+    //  INTCON
+    INTCONbits.GIE = 1;    // Global Interrupt Enable
+    INTCONbits.PEIE = 1;   // Peripheral Interrupt Enable
+    INTCONbits.TMR0IE = 1; // Timer0 Overflow Interrupt Enable
+    INTCONbits.INT0IE = 0; // External Interrupt 0 Enable
+    INTCONbits.RBIF = 0;   // RB Port Change Interrupt Flag
+    INTCONbits.RBIE = 1;   // RB Port Change Interrupt Enable
+    INTCONbits.TMR0IF = 0; // Timer0 Overflow Interrupt Flag
+    INTCONbits.INT0IF = 0; // External Interrupt 0 Flag
+
+    // RCON
+    RCONbits.IPEN = 0; // Interrupt Priority Enable
+
+    // T0CON
+    T0CONbits.TMR0ON = 1; // Timer0 On/Off Control
+    T0CONbits.T08BIT = 0; // Timer0 8-bit/16-bit Control
+    T0CONbits.T0CS = 0;   // Timer0 Clock Source Select
+    T0CONbits.T0SE = 0;   // Timer0 Source Edge Select
+    T0CONbits.PSA = 0;    // Timer0 Prescaler Assignment
+    T0CONbits.T0PS2 = 1;  // Timer0 Prescaler Select bits
+    T0CONbits.T0PS1 = 0;  // Timer0 Prescaler Select bits
+    T0CONbits.T0PS0 = 1;  // Timer0 Prescaler Select bits
+
+    // Initial Timer0 Value
+    TMR0L = 0x69;
+    TMR0H = 0x67;
+}
+
+// ============================ //
+//   INTERRUPT SERVICE ROUTINE  //
+// ============================ //
+
+__interrupt(high_priority) void HandleInterrupt()
+{
+
+    if (INTCONbits.RBIF == 1)
+    {
+        ProcessButtonPress();
+        INTCONbits.RBIF = 0; // Clear the RB port change interrupt flag
+    }
+
+    if (INTCONbits.TMR0IF == 1)
+    {
+
+        two_seconds_counter++;
+        INTCONbits.TMR0IF = 0; // Clear the Timer0 overflow interrupt flag
+        TMR0L = 0x69;
+        TMR0H = 0x67;
+        if (blink_flag == 0)
+        {
+            // Light is on
+            blink_flag = 1;
+            active_piece_record = active_piece;
+            active_piece = 0x00000000;
+        }
+        else
+        {
+            // Light is off
+            blink_flag = 0;
+            active_piece = active_piece_record;
+            active_piece_record = 0x00000000;
+        }
+
+        if (two_seconds_counter == 8)
+        {
+
+            if (is_at_bottom == 0)
+            {
+                shift_down_piece(&active_piece);
+            }
+
+            two_seconds_counter = 0;
+
+            if (LATC_flag == 1)
+            {
+                LATC_value = LATC_old;
+                LATC_flag = 0;
+            }
+            if (LATD_flag == 1)
+            {
+                LATD_value = LATD_old;
+                LATD_flag = 0;
+            }
+            if (LATE_flag == 1)
+            {
+                LATE_value = LATE_old;
+                LATE_flag = 0;
+            }
+            if (LATF_flag == 1)
+            {
+                LATF_value = LATF_old;
+                LATF_flag = 0;
+            }
+        }
+    }
+}
+
+// ============================ //
+//       Helper Functions      //
+// ============================ //
+
+void freeze_piece()
+{
+    LATC_value = PORTC;
+    LATD_value = PORTD;
+    LATE_value = PORTE;
+    LATF_value = PORTF;
+
+    prev_piece = (prev_piece + 1) % 3;
+
+    spawn_piece();
+}
+
+void ProcessButtonPress()
+{
+    static ButtonState state = Waiting;
+    static uint8_t buttonCount = 0;
+    Button_Type currentButtonRead;
+
+    currentButtonRead.Full = PORTB & 0xF0; // Assuming buttons are on higher nibble
+
+    if (state == Waiting)
+    {
+        if (currentButtonRead.Full != 0)
+        {
+            state = Detected;
+            Temp_Press = currentButtonRead;
+            buttonCount = 0;
+        }
+    }
+    else if (state == Detected)
+    {
+        if (currentButtonRead.Full == Temp_Press.Full)
+        {
+            buttonCount++;
+            if (buttonCount >= MIN_BUTTON_COUNT)
+            {
+                state = WaitForRelease;
+            }
+        }
+        else
+        {
+            state = Waiting;
+        }
+    }
+    else if (state == WaitForRelease)
+    {
+        if (currentButtonRead.Full == 0)
+        {
+            state = Update;
+        }
+    }
+    else if (state == Update)
+    {
+        Button_Press = Temp_Press;
+        state = Waiting;
+        buttonCount = 0;
+    }
+}
+
+void shift_down_piece(uint32_t *active_piece)
+{
+    uint8_t *ports = parse_and_assign(*active_piece);
+    // Shift the ports to the left
+    uint8_t byte0 = ports[0] << 1;
+    uint8_t byte1 = ports[1] << 1;
+    uint8_t byte2 = ports[2] << 1;
+    uint8_t byte3 = ports[3] << 1;
+    // Store the port values in the array
+    ports[0] = byte0;
+    ports[1] = byte1;
+    ports[2] = byte2;
+    ports[3] = byte3;
+
+    // Reconstruct the active_piece value using bitwise operations
+    *active_piece = ((uint32_t)ports[0] << 24) | ((uint32_t)ports[1] << 16) | ((uint32_t)ports[2] << 8) | ((uint32_t)ports[3]);
+}
+
+uint8_t *parse_and_assign(uint32_t value)
+{
+    static uint8_t ports[4];
+
+    // Parse the 4-byte value into individual bytes
+    uint8_t byte0 = (value >> 24) & 0xFF;
+    uint8_t byte1 = (value >> 16) & 0xFF;
+    uint8_t byte2 = (value >> 8) & 0xFF;
+    uint8_t byte3 = (value >> 0) & 0xFF;
+
+    // Store the port values in the array
+    ports[0] = byte0;
+    ports[1] = byte1;
+    ports[2] = byte2;
+    ports[3] = byte3;
+
+    // Return the array of port values
+    return ports;
+}
+
+void spawn_piece()
+{
+    if (prev_piece == 2)
+    {
+        // Spawn a dot
+        active_piece = 0x01000000;
+    }
+    else if (prev_piece == 1)
+    {
+        active_piece = 0x01030000;
+    }
+    else
+    {
+        active_piece = 0x03030000;
+    }
+}
+
+void show_piece()
+{
+    uint8_t *ports = parse_and_assign(active_piece);
+    LATC = ports[0] | LATC_value;
+    LATD = ports[1] | LATD_value;
+    LATE = ports[2] | LATE_value;
+    LATF = ports[3] | LATF_value;
+
+    // COLLISION
+    if ((ports[0] & LATC_value) && LATC_flag == 0)
+    {
+        LATC_flag = 1;
+        LATC_old = LATC_value;
+        // clear corresponding bit
+        LATC_value = PORTC & ~ports[0];
+    }
+    if ((ports[1] & LATD_value) && LATD_flag == 0)
+    {
+        LATD_flag = 1;
+        LATD_old = LATD_value;
+        // clear corresponding bit
+        LATD_value = PORTD & ~ports[1];
+    }
+    if ((ports[2] & LATE_value) && LATE_flag == 0)
+    {
+        LATE_flag = 1;
+        LATE_old = LATE_value;
+        // clear corresponding bit
+        LATE_value = PORTE & ~ports[2];
+    }
+    if ((ports[3] & LATF_value) && LATF_flag == 0)
+    {
+        LATF_flag = 1;
+        LATF_old = LATF_value;
+        // clear corresponding bit
+        LATF_value = PORTF & ~ports[3];
+    }
+
+    // BOTTOM CHECK
+    if (ports[0] & 0x80 || ports[1] & 0x80 || ports[2] & 0x80 || ports[3] & 0x80)
+    {
+        is_at_bottom = 1;
+    }
+}
+
+// ============================ //
+//            MAIN              //
+// ============================ //
+void main()
+{
+    Init();
+
+    // Wait 1 second
+    __delay_ms(1000);
+
+    InitializeTimerAndInterrupts();
+    TMR0L = 0x69;
+    TMR0H = 0x67;
+
+    spawn_piece();
+    // Main Loop
+    while (1)
+    {
+        show_piece();
+
+        if (Button_Press.B4)
+        {
+            // Handle button 4 press
+            Button_Press.B4 = 0; // Clear the button press after handling
+        }
+
+        if (Button_Press.B6)
+        {
+            freeze_piece();
+            Button_Press.B6 = 0;
+        }
+    }
+}
